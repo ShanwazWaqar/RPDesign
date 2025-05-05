@@ -1,5 +1,5 @@
 // src/components/ScrollAnimation.js
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
 const ScrollAnimation = ({ 
