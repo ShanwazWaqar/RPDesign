@@ -1,0 +1,92 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Mission to Mars game elements -->
+  <g>
+    <!-- Game board -->
+    <rect x="150" y="150" width="500" height="400" rx="10" fill="#FAFAFA" stroke="#333333" stroke-width="4"/>
+    
+    <!-- Mars surface (background) -->
+    <rect x="160" y="160" width="480" height="380" rx="6" fill="#E57373" opacity="0.2"/>
+    
+    <!-- Game paths/tracks -->
+    <circle cx="400" cy="330" r="150" fill="none" stroke="#BA0C2F" stroke-width="30" opacity="0.3"/>
+    
+    <!-- Game stations/nodes -->
+    <g>
+      <!-- Blue station -->
+      <circle cx="400" cy="180" r="40" fill="#2196F3"/>
+      <text x="400" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">PLAN</text>
+      
+      <!-- Green station -->
+      <circle cx="550" cy="330" r="40" fill="#4CAF50"/>
+      <text x="550" y="335" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">BUILD</text>
+      
+      <!-- Red station -->
+      <circle cx="400" cy="480" r="40" fill="#BA0C2F"/>
+      <text x="400" y="485" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">TEST</text>
+      
+      <!-- Yellow station -->
+      <circle cx="250" cy="330" r="40" fill="#FFC107"/>
+      <text x="250" y="335" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">REVISE</text>
+    </g>
+    
+    <!-- Mars at center -->
+    <circle cx="400" cy="330" r="50" fill="#BA0C2F"/>
+    <ellipse cx="370" cy="300" rx="10" ry="15" fill="#8D6E63" opacity="0.7"/>
+    <ellipse cx="420" cy="310" rx="15" ry="10" fill="#8D6E63" opacity="0.7"/>
+    <ellipse cx="400" cy="350" rx="20" ry="12" fill="#8D6E63" opacity="0.7"/>
+    
+    <!-- Game pieces -->
+    <g transform="translate(390, 240)">
+      <path d="M0,0 L-10,-30 L10,-30 Z" fill="#333333"/>
+      <rect x="-15" y="-30" width="30" height="15" rx="2" fill="#333333"/>
+      <circle cx="0" cy="-40" r="10" fill="#333333"/>
+    </g>
+    
+    <g transform="translate(470, 300)">
+      <path d="M0,0 L-10,-30 L10,-30 Z" fill="#BA0C2F"/>
+      <rect x="-15" y="-30" width="30" height="15" rx="2" fill="#BA0C2F"/>
+      <circle cx="0" cy="-40" r="10" fill="#BA0C2F"/>
+    </g>
+    
+    <!-- Game title -->
+    <text x="400" y="100" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#BA0C2F" text-anchor="middle">DSG: MISSION TO MARS</text>
+    <text x="400" y="130" font-family="Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle">Design Process Board Game</text>
+    
+    <!-- Design parts/components scattered around the board -->
+    <g>
+      <!-- Rover model -->
+      <g transform="translate(650, 480)">
+        <rect x="-20" y="-10" width="40" height="20" fill="#757575"/>
+        <circle cx="-15" cy="15" r="8" fill="#333333"/>
+        <circle cx="15" cy="15" r="8" fill="#333333"/>
+        <rect x="-25" y="-5" width="10" height="3" fill="#757575"/>
+        <rect x="15" y="-5" width="10" height="3" fill="#757575"/>
+      </g>
+      
+      <!-- Solar panel -->
+      <g transform="translate(180, 220)">
+        <rect x="-20" y="-15" width="40" height="30" fill="#2196F3"/>
+        <line x1="-20" y1="-5" x2="20" y2="-5" stroke="#333333" stroke-width="1"/>
+        <line x1="-20" y1="5" x2="20" y2="5" stroke="#333333" stroke-width="1"/>
+        <line x1="-10" y1="-15" x2="-10" y2="15" stroke="#333333" stroke-width="1"/>
+        <line x1="0" y1="-15" x2="0" y2="15" stroke="#333333" stroke-width="1"/>
+        <line x1="10" y1="-15" x2="10" y2="15" stroke="#333333" stroke-width="1"/>
+      </g>
+      
+      <!-- Satellite dish -->
+      <g transform="translate(200, 450)">
+        <path d="M0,0 C-20,-20 -5,-40 20,-25" fill="none" stroke="#333333" stroke-width="2"/>
+        <line x1="0" y1="0" x2="0" y2="20" stroke="#333333" stroke-width="2"/>
+      </g>
+    </g>
+    
+    <!-- VCU Logo (simplified) -->
+    <g transform="translate(700, 100) scale(0.5)">
+      <circle cx="0" cy="0" r="25" fill="#BA0C2F" stroke="#333333" stroke-width="2"/>
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">VCU</text>
+    </g>
+  </g>
+</svg>

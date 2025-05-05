@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- River Rush game elements -->
+  <g>
+    <!-- Game box -->
+    <rect x="150" y="100" width="500" height="400" fill="#1565C0" stroke="#333333" stroke-width="4"/>
+    <rect x="160" y="110" width="480" height="380" fill="#64B5F6" stroke="#333333" stroke-width="2"/>
+    
+    <!-- Game Title -->
+    <rect x="200" y="140" width="400" height="100" rx="10" fill="#BA0C2F"/>
+    <text x="400" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">RIVER RUSH</text>
+    <text x="400" y="230" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">Sustainability Board Game</text>
+    
+    <!-- Game board illustration -->
+    <path d="M250,280 C300,260 350,320 400,300 C450,280 500,320 550,300" fill="none" stroke="#2196F3" stroke-width="30" stroke-linecap="round"/>
+    <path d="M250,330 C300,310 350,370 400,350 C450,330 500,370 550,350" fill="none" stroke="#1976D2" stroke-width="30" stroke-linecap="round"/>
+    
+    <!-- Game tokens -->
+    <circle cx="300" cy="400" r="20" fill="#FFD700" stroke="#333333" stroke-width="2"/>
+    <circle cx="350" cy="410" r="20" fill="#FFD700" stroke="#333333" stroke-width="2"/>
+    <circle cx="400" cy="400" r="20" fill="#FFD700" stroke="#333333" stroke-width="2"/>
+    <circle cx="450" cy="410" r="20" fill="#FFD700" stroke="#333333" stroke-width="2"/>
+    
+    <!-- Game pieces -->
+    <g transform="translate(280, 290)">
+      <rect x="-8" y="-15" width="16" height="20" rx="2" fill="#BA0C2F"/>
+      <circle cx="0" cy="-20" r="8" fill="#BA0C2F"/>
+    </g>
+    
+    <g transform="translate(330, 285)">
+      <rect x="-8" y="-15" width="16" height="20" rx="2" fill="#4CAF50"/>
+      <circle cx="0" cy="-20" r="8" fill="#4CAF50"/>
+    </g>
+    
+    <g transform="translate(510, 285)">
+      <rect x="-8" y="-15" width="16" height="20" rx="2" fill="#9C27B0"/>
+      <circle cx="0" cy="-20" r="8" fill="#9C27B0"/>
+    </g>
+    
+    <!-- VCU Logo (simplified) -->
+    <circle cx="220" cy="180" r="25" fill="#BA0C2F" stroke="#333333" stroke-width="2"/>
+    <text x="220" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">VCU</text>
+    
+    <!-- Designer info -->
+    <text x="400" y="460" font-family="Arial, sans-serif" font-size="14" fill="#333333" text-anchor="middle">Designed by RP Design Technologies</text>
+  </g>
+</svg>

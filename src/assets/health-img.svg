@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Medical/Health elements -->
+  <g>
+    <!-- Heart rate monitor line -->
+    <path d="M50,300 L150,300 L200,150 L250,450 L300,300 L350,300 L400,200 L450,300 L550,300 L600,150 L650,450 L700,300 L750,300" 
+          fill="none" stroke="#BA0C2F" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+    
+    <!-- Heart icon -->
+    <path d="M250,150 C250,120 280,120 300,150 C320,120 350,120 350,150 C350,200 300,250 300,250 C300,250 250,200 250,150 Z" 
+          fill="#BA0C2F" opacity="0.8"/>
+    
+    <!-- Stethoscope -->
+    <circle cx="550" cy="200" r="30" fill="#333333"/>
+    <path d="M550,230 C550,230 550,330 450,330 C450,330 450,400 480,400" 
+          fill="none" stroke="#333333" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="480" cy="400" r="15" fill="#333333"/>
+    <circle cx="550" cy="200" r="15" fill="#f8f9fa"/>
+    
+    <!-- Medical cross -->
+    <rect x="150" y="400" width="100" height="100" rx="10" fill="#BA0C2F"/>
+    <rect x="180" y="370" width="40" height="160" rx="10" fill="#BA0C2F"/>
+    <circle cx="200" cy="450" r="30" fill="#f8f9fa"/>
+    
+    <!-- DNA helix -->
+    <g>
+      <path d="M650,350 C700,400 700,500 650,550" fill="none" stroke="#333333" stroke-width="5"/>
+      <path d="M750,350 C700,400 700,500 750,550" fill="none" stroke="#BA0C2F" stroke-width="5"/>
+      
+      <!-- Connections between strands -->
+      <line x1="655" y1="370" x2="745" y2="370" stroke="#333333" stroke-width="3"/>
+      <line x1="660" y1="410" x2="740" y2="410" stroke="#BA0C2F" stroke-width="3"/>
+      <line x1="660" y1="450" x2="740" y2="450" stroke="#333333" stroke-width="3"/>
+      <line x1="660" y1="490" x2="740" y2="490" stroke="#BA0C2F" stroke-width="3"/>
+      <line x1="655" y1="530" x2="745" y2="530" stroke="#333333" stroke-width="3"/>
+    </g>
+    
+    <!-- Cellular structure (abstract) -->
+    <g transform="translate(80,150) scale(0.6)">
+      <circle cx="150" cy="150" r="80" fill="none" stroke="#333333" stroke-width="3"/>
+      <circle cx="150" cy="150" r="40" fill="#BA0C2F" opacity="0.5"/>
+      <circle cx="200" cy="100" r="30" fill="#333333" opacity="0.3"/>
+      <circle cx="100" cy="180" r="25" fill="#BA0C2F" opacity="0.3"/>
+      <circle cx="180" cy="200" r="35" fill="#333333" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

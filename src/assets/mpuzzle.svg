@@ -1,0 +1,120 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Mpuzzle game elements -->
+  <g>
+    <!-- Title -->
+    <text x="400" y="80" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#BA0C2F" text-anchor="middle">Mpuzzle</text>
+    <text x="400" y="110" font-family="Arial, sans-serif" font-size="20" fill="#333333" text-anchor="middle">3D Cellular Structure Puzzle</text>
+    
+    <!-- Building blocks - red -->
+    <g transform="translate(250, 250)">
+      <path d="M0,0 L40,0 L40,40 L0,40 Z" fill="#BA0C2F"/>
+      <path d="M40,0 L60,20 L60,60 L40,40 Z" fill="#D32F2F"/>
+      <path d="M0,40 L40,40 L60,60 L20,60 Z" fill="#B71C1C"/>
+      <path d="M0,0 L0,40 L20,60 L20,20 Z" fill="#C62828"/>
+      <path d="M0,0 L40,0 L60,20 L20,20 Z" fill="#E53935"/>
+      
+      <!-- Connector -->
+      <rect x="15" y="15" width="10" height="10" fill="#333333"/>
+      <rect x="15" y="-5" width="10" height="20" rx="2" fill="#333333"/>
+    </g>
+    
+    <!-- Building blocks - blue -->
+    <g transform="translate(400, 200)">
+      <path d="M0,0 L40,0 L40,40 L0,40 Z" fill="#1565C0"/>
+      <path d="M40,0 L60,20 L60,60 L40,40 Z" fill="#0D47A1"/>
+      <path d="M0,40 L40,40 L60,60 L20,60 Z" fill="#0A367A"/>
+      <path d="M0,0 L0,40 L20,60 L20,20 Z" fill="#1976D2"/>
+      <path d="M0,0 L40,0 L60,20 L20,20 Z" fill="#2196F3"/>
+      
+      <!-- Connector -->
+      <rect x="15" y="15" width="10" height="10" fill="#333333"/>
+      <rect x="30" y="15" width="20" height="10" rx="2" fill="#333333"/>
+    </g>
+    
+    <!-- Building blocks - yellow -->
+    <g transform="translate(500, 300)">
+      <path d="M0,0 L40,0 L40,40 L0,40 Z" fill="#FFC107"/>
+      <path d="M40,0 L60,20 L60,60 L40,40 Z" fill="#FFA000"/>
+      <path d="M0,40 L40,40 L60,60 L20,60 Z" fill="#FF8F00"/>
+      <path d="M0,0 L0,40 L20,60 L20,20 Z" fill="#FFB300"/>
+      <path d="M0,0 L40,0 L60,20 L20,20 Z" fill="#FFCA28"/>
+      
+      <!-- Connector -->
+      <rect x="15" y="15" width="10" height="10" fill="#333333"/>
+      <rect x="15" y="25" width="10" height="20" rx="2" fill="#333333"/>
+    </g>
+    
+    <!-- Cell structure diagram -->
+    <g transform="translate(180, 400)">
+      <ellipse cx="0" cy="0" rx="100" ry="70" fill="none" stroke="#333333" stroke-width="2"/>
+      <ellipse cx="0" cy="0" rx="30" ry="20" fill="#BA0C2F" opacity="0.5"/>
+      
+      <!-- Microtubules -->
+      <line x1="-80" y1="-20" x2="80" y2="-20" stroke="#1565C0" stroke-width="2" stroke-dasharray="5,3"/>
+      <line x1="-70" y1="0" x2="70" y2="0" stroke="#1565C0" stroke-width="2" stroke-dasharray="5,3"/>
+      <line x1="-80" y1="20" x2="80" y2="20" stroke="#1565C0" stroke-width="2" stroke-dasharray="5,3"/>
+      
+      <!-- Transport indicators -->
+      <circle cx="-50" cy="-20" r="5" fill="#FFC107"/>
+      <circle cx="30" cy="0" r="5" fill="#FFC107"/>
+      <circle cx="10" cy="20" r="5" fill="#FFC107"/>
+      <circle cx="-30" cy="20" r="5" fill="#FFC107"/>
+    </g>
+    
+    <!-- Assembled puzzle example -->
+    <g transform="translate(550, 450)">
+      <!-- Layer 1 -->
+      <g>
+        <path d="M0,0 L20,0 L20,20 L0,20 Z" fill="#1565C0"/>
+        <path d="M20,0 L40,0 L40,20 L20,20 Z" fill="#1565C0"/>
+        <path d="M40,0 L60,0 L60,20 L40,20 Z" fill="#1565C0"/>
+        <path d="M0,20 L20,20 L20,40 L0,40 Z" fill="#1565C0"/>
+        <path d="M20,20 L40,20 L40,40 L20,40 Z" fill="#FFC107"/>
+        <path d="M40,20 L60,20 L60,40 L40,40 Z" fill="#1565C0"/>
+        <path d="M0,40 L20,40 L20,60 L0,60 Z" fill="#1565C0"/>
+        <path d="M20,40 L40,40 L40,60 L20,60 Z" fill="#1565C0"/>
+        <path d="M40,40 L60,40 L60,60 L40,60 Z" fill="#1565C0"/>
+      </g>
+      
+      <!-- Layer 2 indication -->
+      <g transform="translate(0, -10)">
+        <path d="M0,0 L60,0 L60,2 L0,2 Z" fill="#333333"/>
+        <path d="M0,0 L2,0 L2,60 L0,60 Z" fill="#333333"/>
+        <path d="M58,0 L60,0 L60,60 L58,60 Z" fill="#333333"/>
+        <path d="M0,58 L60,58 L60,60 L0,60 Z" fill="#333333"/>
+      </g>
+    </g>
+    
+    <!-- Children playing with puzzle -->
+    <g transform="translate(300, 330)">
+      <!-- Child figure 1 (simplified) -->
+      <circle cx="0" cy="0" r="15" fill="#FFA726"/> <!-- Head -->
+      <rect x="-10" y="15" width="20" height="30" rx="5" fill="#66BB6A"/> <!-- Body -->
+      <line x1="-10" y1="20" x2="-25" y2="35" stroke="#66BB6A" stroke-width="6" stroke-linecap="round"/> <!-- Arm -->
+      <line x1="10" y1="20" x2="15" y2="30" stroke="#66BB6A" stroke-width="6" stroke-linecap="round"/> <!-- Arm -->
+    </g>
+    
+    <g transform="translate(350, 340)">
+      <!-- Child figure 2 (simplified) -->
+      <circle cx="0" cy="0" r="15" fill="#FFCCBC"/> <!-- Head -->
+      <rect x="-10" y="15" width="20" height="30" rx="5" fill="#EF5350"/> <!-- Body -->
+      <line x1="-10" y1="20" x2="-20" y2="30" stroke="#EF5350" stroke-width="6" stroke-linecap="round"/> <!-- Arm -->
+      <line x1="10" y1="20" x2="25" y2="35" stroke="#EF5350" stroke-width="6" stroke-linecap="round"/> <!-- Arm -->
+    </g>
+    
+    <g transform="translate(400, 350)">
+      <!-- Child figure 3 (simplified) -->
+      <circle cx="0" cy="0" r="15" fill="#BCAAA4"/> <!-- Head -->
+      <rect x="-10" y="15" width="20" height="30" rx="5" fill="#5C6BC0"/> <!-- Body -->
+      <line x1="-10" y1="20" x2="-15" y2="35" stroke="#5C6BC0" stroke-width="6" stroke-linecap="round"/> <!-- Arm -->
+      <line x1="10" y1="20" x2="20" y2="30" stroke="#5C6BC0" stroke-width="6" stroke-linecap="round"/> <!-- Arm -->
+    </g>
+    
+    <!-- Text labels -->
+    <text x="180" y="370" font-family="Arial, sans-serif" font-size="14" fill="#333333" font-weight="bold">Cell Structure</text>
+    <text x="550" y="420" font-family="Arial, sans-serif" font-size="14" fill="#333333" font-weight="bold">3D Puzzle Model</text>
+  </g>
+</svg>

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Tech elements -->
+  <g>
+    <!-- Circuit board pattern -->
+    <path d="M50,100 H750 M50,200 H750 M50,300 H750 M50,400 H750 M50,500 H750" 
+          stroke="#333333" stroke-width="2" stroke-opacity="0.2"/>
+    <path d="M100,50 V550 M200,50 V550 M300,50 V550 M400,50 V550 M500,50 V550 M600,50 V550 M700,50 V550" 
+          stroke="#333333" stroke-width="2" stroke-opacity="0.2"/>
+    
+    <!-- Connection nodes -->
+    <circle cx="100" cy="100" r="8" fill="#BA0C2F"/>
+    <circle cx="100" cy="300" r="8" fill="#BA0C2F"/>
+    <circle cx="100" cy="500" r="8" fill="#BA0C2F"/>
+    <circle cx="300" cy="100" r="8" fill="#BA0C2F"/>
+    <circle cx="300" cy="300" r="8" fill="#BA0C2F"/>
+    <circle cx="300" cy="500" r="8" fill="#BA0C2F"/>
+    <circle cx="500" cy="100" r="8" fill="#BA0C2F"/>
+    <circle cx="500" cy="300" r="8" fill="#BA0C2F"/>
+    <circle cx="500" cy="500" r="8" fill="#BA0C2F"/>
+    <circle cx="700" cy="100" r="8" fill="#BA0C2F"/>
+    <circle cx="700" cy="300" r="8" fill="#BA0C2F"/>
+    <circle cx="700" cy="500" r="8" fill="#BA0C2F"/>
+    
+    <!-- Connection lines -->
+    <path d="M100,100 L300,100 L300,300 L500,300 L500,500 L700,500" 
+          fill="none" stroke="#BA0C2F" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M100,300 L300,500 L700,100" 
+          fill="none" stroke="#BA0C2F" stroke-width="4" stroke-linejoin="round"/>
+    
+    <!-- CPU/Processor -->
+    <rect x="350" y="250" width="100" height="100" fill="#333333"/>
+    <rect x="360" y="260" width="80" height="80" fill="#f8f9fa"/>
+    <rect x="370" y="270" width="60" height="60" fill="#BA0C2F" opacity="0.8"/>
+    
+    <!-- Data streams -->
+    <g>
+      <rect x="200" y="150" width="10" height="10" fill="#BA0C2F">
+        <animate attributeName="y" values="150;450;150" dur="5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="400" y="450" width="10" height="10" fill="#BA0C2F">
+        <animate attributeName="y" values="450;150;450" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="600" y="300" width="10" height="10" fill="#BA0C2F">
+        <animate attributeName="y" values="300;100;500;300" dur="6s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    
+    <!-- Gear representing mechanics/engineering -->
+    <g transform="translate(600,200)">
+      <circle cx="0" cy="0" r="50" fill="#f8f9fa" stroke="#333333" stroke-width="4"/>
+      <circle cx="0" cy="0" r="20" fill="#BA0C2F"/>
+      
+      <!-- Gear teeth -->
+      <rect x="-10" y="-70" width="20" height="20" fill="#333333"/>
+      <rect x="-10" y="50" width="20" height="20" fill="#333333"/>
+      <rect x="-70" y="-10" width="20" height="20" fill="#333333"/>
+      <rect x="50" y="-10" width="20" height="20" fill="#333333"/>
+      
+      <!-- Rotated teeth -->
+      <rect x="-10" y="-10" width="20" height="20" transform="rotate(45) translate(-50,0)" fill="#333333"/>
+      <rect x="-10" y="-10" width="20" height="20" transform="rotate(135) translate(-50,0)" fill="#333333"/>
+      <rect x="-10" y="-10" width="20" height="20" transform="rotate(225) translate(-50,0)" fill="#333333"/>
+      <rect x="-10" y="-10" width="20" height="20" transform="rotate(315) translate(-50,0)" fill="#333333"/>
+    </g>
+  </g>
+</svg>

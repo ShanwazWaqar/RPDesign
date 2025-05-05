@@ -1,0 +1,115 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Fruit Health App elements -->
+  <g>
+    <!-- Smartphone outline -->
+    <rect x="250" y="100" width="300" height="450" rx="20" fill="#FFFFFF" stroke="#333333" stroke-width="10"/>
+    <rect x="270" y="120" width="260" height="390" rx="2" fill="#ECEFF1"/>
+    <circle cx="400" cy="530" r="20" fill="#E0E0E0" stroke="#333333" stroke-width="2"/>
+    
+    <!-- App title bar -->
+    <rect x="270" y="120" width="260" height="50" fill="#BA0C2F"/>
+    <text x="400" y="155" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Fruit Health</text>
+    
+    <!-- App content -->
+    <g>
+      <!-- Fruit scan visualization -->
+      <circle cx="400" cy="230" r="60" fill="#4CAF50" opacity="0.2"/>
+      <path d="M400,170 C430,170 460,200 460,230 C460,260 430,290 400,290 C370,290 340,260 340,230 C340,200 370,170 400,170 Z" fill="none" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,3"/>
+      
+      <!-- Apple silhouette -->
+      <path d="M400,190 C410,190 420,195 420,210 C430,210 450,215 450,250 C450,280 430,300 400,300 C370,300 350,280 350,250 C350,215 370,210 380,210 C380,195 390,190 400,190 Z" fill="#F44336"/>
+      <path d="M400,190 C395,175 400,170 405,170 C410,170 415,175 410,190" fill="#4CAF50"/>
+      
+      <!-- Scanning lines -->
+      <line x1="320" y1="220" x2="480" y2="220" stroke="#2196F3" stroke-width="2"/>
+      <line x1="320" y1="230" x2="480" y2="230" stroke="#2196F3" stroke-width="2"/>
+      <line x1="320" y1="240" x2="480" y2="240" stroke="#2196F3" stroke-width="2"/>
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="translate"
+        values="0 -20; 0 20; 0 -20"
+        dur="3s"
+        repeatCount="indefinite"/>
+      
+      <!-- Analysis results section -->
+      <rect x="290" y="330" width="220" height="160" rx="5" fill="white" stroke="#E0E0E0" stroke-width="2"/>
+      <text x="400" y="350" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Fruit Analysis</text>
+      
+      <!-- Analysis metrics -->
+      <line x1="300" y1="360" x2="500" y2="360" stroke="#E0E0E0" stroke-width="1"/>
+      
+      <text x="310" y="380" font-family="Arial, sans-serif" font-size="14" fill="#333333">Ripeness:</text>
+      <rect x="400" y="370" width="100" height="10" rx="5" fill="#E0E0E0"/>
+      <rect x="400" y="370" width="75" height="10" rx="5" fill="#4CAF50"/>
+      
+      <text x="310" y="410" font-family="Arial, sans-serif" font-size="14" fill="#333333">Freshness:</text>
+      <rect x="400" y="400" width="100" height="10" rx="5" fill="#E0E0E0"/>
+      <rect x="400" y="400" width="80" height="10" rx="5" fill="#2196F3"/>
+      
+      <text x="310" y="440" font-family="Arial, sans-serif" font-size="14" fill="#333333">Sugar content:</text>
+      <rect x="400" y="430" width="100" height="10" rx="5" fill="#E0E0E0"/>
+      <rect x="400" y="430" width="60" height="10" rx="5" fill="#FFC107"/>
+      
+      <text x="310" y="470" font-family="Arial, sans-serif" font-size="14" fill="#333333">Overall Health:</text>
+      <rect x="400" y="460" width="100" height="10" rx="5" fill="#E0E0E0"/>
+      <rect x="400" y="460" width="85" height="10" rx="5" fill="#BA0C2F"/>
+    </g>
+  </g>
+  
+  <!-- External fruit elements -->
+  <g>
+    <!-- Various fruits around the phone -->
+    <!-- Orange -->
+    <circle cx="180" y="150" r="40" fill="#FF9800"/>
+    <path d="M180,120 C175,115 185,115 180,120" fill="#4CAF50"/>
+    
+    <!-- Banana -->
+    <path d="M180,300 C220,250 240,250 230,270 C220,290 200,330 170,310 C150,300 160,290 180,300 Z" fill="#FFEB3B"/>
+    
+    <!-- Grapes -->
+    <g transform="translate(180, 420)">
+      <circle cx="0" cy="0" r="15" fill="#9C27B0"/>
+      <circle cx="20" cy="10" r="15" fill="#9C27B0"/>
+      <circle cx="5" cy="25" r="15" fill="#9C27B0"/>
+      <circle cx="25" cy="30" r="15" fill="#9C27B0"/>
+      <path d="M10,-15 C10,-25 20,-25 20,-15" fill="#4CAF50" stroke="#4CAF50" stroke-width="2"/>
+    </g>
+    
+    <!-- Strawberry -->
+    <g transform="translate(600, 200)">
+      <path d="M0,0 C20,20 40,20 40,0 C40,-20 20,-30 0,0 Z" fill="#F44336"/>
+      <circle cx="10" cy="5" r="2" fill="#FFEB3B"/>
+      <circle cx="25" cy="10" r="2" fill="#FFEB3B"/>
+      <circle cx="15" cy="15" r="2" fill="#FFEB3B"/>
+      <circle cx="30" cy="0" r="2" fill="#FFEB3B"/>
+      <path d="M15,-10 C15,-15 25,-15 25,-10" fill="#4CAF50"/>
+    </g>
+    
+    <!-- Apple -->
+    <g transform="translate(630, 350)">
+      <circle cx="0" cy="0" r="30" fill="#F44336"/>
+      <path d="M0,-30 C-5,-40 5,-40 0,-30" fill="#4CAF50"/>
+    </g>
+    
+    <!-- Tech indicators -->
+    <g transform="translate(220, 240)">
+      <path d="M0,0 L40,0" stroke="#333333" stroke-width="1" stroke-dasharray="5,2"/>
+      <circle cx="0" cy="0" r="5" fill="#333333"/>
+      <text x="50" y="5" font-family="Arial, sans-serif" font-size="12" fill="#333333">Analysis</text>
+    </g>
+    
+    <g transform="translate(560, 280)">
+      <path d="M0,0 L-40,0" stroke="#333333" stroke-width="1" stroke-dasharray="5,2"/>
+      <circle cx="0" cy="0" r="5" fill="#333333"/>
+      <text x="-100" y="5" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="end">Scanning</text>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#BA0C2F" text-anchor="middle">Fruit Health APP</text>
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="18" fill="#333333" text-anchor="middle">Plant/Fruit Quality Analysis</text>
+</svg>

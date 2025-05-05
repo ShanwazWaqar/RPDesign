@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="200" fill="#f5f5f5"/>
+  
+  <!-- Professional person silhouette -->
+  <g transform="translate(200, 200)">
+    <!-- Head -->
+    <circle cx="0" cy="-70" r="60" fill="#D7CCC8"/>
+    
+    <!-- Face (simplified) -->
+    <circle cx="-20" cy="-70" r="8" fill="#FFFFFF"/> <!-- Left eye -->
+    <circle cx="20" cy="-70" r="8" fill="#FFFFFF"/> <!-- Right eye -->
+    <circle cx="-20" cy="-70" r="3" fill="#263238"/> <!-- Left pupil -->
+    <circle cx="20" cy="-70" r="3" fill="#263238"/> <!-- Right pupil -->
+    <path d="M0,-50 C10,-45 -10,-45 0,-50" stroke="#263238" stroke-width="3" fill="none"/> <!-- Smile -->
+    
+    <!-- Hair -->
+    <path d="M-60,-110 L-60,-70 L-40,-50 L40,-50 L60,-70 L60,-110 Z" fill="#757575"/>
+    <path d="M-60,-90 C-40,-100 40,-100 60,-90" fill="#616161"/>
+    
+    <!-- Glasses -->
+    <rect x="-35" y="-80" width="30" height="20" rx="5" fill="none" stroke="#9E9E9E" stroke-width="2"/>
+    <rect x="5" y="-80" width="30" height="20" rx="5" fill="none" stroke="#9E9E9E" stroke-width="2"/>
+    <line x1="-5" y1="-70" x2="5" y2="-70" stroke="#9E9E9E" stroke-width="2"/>
+    
+    <!-- Body -->
+    <path d="M0,-10 L-80,100 L80,100 Z" fill="#673AB7"/> <!-- Shirt/jacket -->
+    <rect x="-40" y="-10" width="80" height="30" fill="#F5F5F5"/> <!-- Collar/shirt -->
+    
+    <!-- Education symbol -->
+    <circle cx="0" cy="20" r="15" fill="#FFC107"/>
+    <path d="M-10,20 L0,15 L10,20 L0,25 Z" fill="#263238"/> <!-- Book/graduation symbol -->
+    
+    <!-- Shoulder details -->
+    <path d="M-50,20 L-35,5 L-20,20" fill="none" stroke="#263238" stroke-width="2"/>
+    <path d="M50,20 L35,5 L20,20" fill="none" stroke="#263238" stroke-width="2"/>
+  </g>
+  
+  <!-- Professional border with UGA colors -->
+  <circle cx="200" cy="200" r="195" fill="none" stroke="#BA0C2F" stroke-width="10"/>
+  
+  <!-- Position indication -->
+  <text x="200" y="330" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#263238" text-anchor="middle">EDUCATION TECHNOLOGY EXPERT</text>
+</svg>

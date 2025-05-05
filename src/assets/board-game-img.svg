@@ -1,0 +1,83 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Board game elements -->
+  <g>
+    <!-- Game board base -->
+    <rect x="100" y="100" width="600" height="400" rx="15" fill="#f0f0f0" stroke="#333333" stroke-width="5"/>
+    
+    <!-- Game path -->
+    <path d="M150,400 C150,400 200,350 250,350 C300,350 350,400 400,400 C450,400 500,350 550,350 C600,350 650,400 650,200 C650,150 600,150 550,150 C500,150 450,200 400,200 C350,200 300,150 250,150 C200,150 150,200 150,250" 
+          fill="none" stroke="#BA0C2F" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0"/>
+    
+    <!-- Game squares along path -->
+    <circle cx="150" cy="400" r="15" fill="#333333"/>
+    <circle cx="200" cy="370" r="15" fill="#BA0C2F"/>
+    <circle cx="250" cy="350" r="15" fill="#333333"/>
+    <circle cx="300" cy="350" r="15" fill="#BA0C2F"/>
+    <circle cx="350" cy="370" r="15" fill="#333333"/>
+    <circle cx="400" cy="400" r="15" fill="#BA0C2F"/>
+    <circle cx="450" cy="370" r="15" fill="#333333"/>
+    <circle cx="500" cy="350" r="15" fill="#BA0C2F"/>
+    <circle cx="550" cy="350" r="15" fill="#333333"/>
+    <circle cx="600" cy="370" r="15" fill="#BA0C2F"/>
+    <circle cx="650" cy="300" r="15" fill="#333333"/>
+    <circle cx="650" cy="250" r="15" fill="#BA0C2F"/>
+    <circle cx="650" cy="200" r="15" fill="#333333"/>
+    <circle cx="600" cy="150" r="15" fill="#BA0C2F"/>
+    <circle cx="550" cy="150" r="15" fill="#333333"/>
+    <circle cx="500" cy="150" r="15" fill="#BA0C2F"/>
+    <circle cx="450" cy="170" r="15" fill="#333333"/>
+    <circle cx="400" cy="200" r="15" fill="#BA0C2F"/>
+    <circle cx="350" cy="170" r="15" fill="#333333"/>
+    <circle cx="300" cy="150" r="15" fill="#BA0C2F"/>
+    <circle cx="250" cy="150" r="15" fill="#333333"/>
+    <circle cx="200" cy="170" r="15" fill="#BA0C2F"/>
+    <circle cx="150" cy="250" r="15" fill="#333333"/>
+    
+    <!-- Game pieces -->
+    <g transform="translate(380, 300)">
+      <rect x="-15" y="-30" width="30" height="40" rx="5" fill="#BA0C2F"/>
+      <circle cx="0" cy="-40" r="12" fill="#BA0C2F"/>
+    </g>
+    
+    <g transform="translate(450, 250)">
+      <rect x="-15" y="-30" width="30" height="40" rx="5" fill="#333333"/>
+      <circle cx="0" cy="-40" r="12" fill="#333333"/>
+    </g>
+    
+    <!-- Dice -->
+    <g transform="translate(250, 250)">
+      <rect x="-20" y="-20" width="40" height="40" rx="5" fill="white" stroke="#333333" stroke-width="2"/>
+      <circle cx="-8" cy="-8" r="5" fill="#BA0C2F"/>
+      <circle cx="8" cy="-8" r="5" fill="#BA0C2F"/>
+      <circle cx="-8" cy="8" r="5" fill="#BA0C2F"/>
+      <circle cx="8" cy="8" r="5" fill="#BA0C2F"/>
+    </g>
+    
+    <g transform="translate(320, 250)">
+      <rect x="-20" y="-20" width="40" height="40" rx="5" fill="white" stroke="#333333" stroke-width="2"/>
+      <circle cx="0" cy="0" r="5" fill="#BA0C2F"/>
+      <circle cx="-10" cy="-10" r="5" fill="#BA0C2F"/>
+      <circle cx="10" cy="10" r="5" fill="#BA0C2F"/>
+    </g>
+    
+    <!-- Game cards -->
+    <rect x="520" y="250" width="70" height="100" rx="5" fill="white" stroke="#333333" stroke-width="2"/>
+    <rect x="530" y="260" width="50" height="10" rx="2" fill="#BA0C2F"/>
+    <rect x="530" y="280" width="50" height="5" rx="1" fill="#333333"/>
+    <rect x="530" y="290" width="50" height="5" rx="1" fill="#333333"/>
+    <rect x="530" y="300" width="50" height="5" rx="1" fill="#333333"/>
+    <rect x="530" y="310" width="30" height="5" rx="1" fill="#333333"/>
+    
+    <g transform="translate(540, 260) rotate(10)">
+      <rect x="0" y="0" width="70" height="100" rx="5" fill="white" stroke="#333333" stroke-width="2"/>
+      <rect x="10" y="10" width="50" height="10" rx="2" fill="#BA0C2F"/>
+      <rect x="10" y="30" width="50" height="5" rx="1" fill="#333333"/>
+      <rect x="10" y="40" width="50" height="5" rx="1" fill="#333333"/>
+      <rect x="10" y="50" width="50" height="5" rx="1" fill="#333333"/>
+      <rect x="10" y="60" width="30" height="5" rx="1" fill="#333333"/>
+    </g>
+  </g>
+</svg>
