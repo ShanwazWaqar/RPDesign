@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 const ProjectCard = ({ project }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transform transition-transform duration-300 hover:scale-105">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} />
       <div className="h-48 bg-gray-200 relative overflow-hidden">
         {project.image && (
           <img

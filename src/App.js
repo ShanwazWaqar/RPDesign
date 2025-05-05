@@ -43,6 +43,7 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} />
         <Navbar />
         <main className="flex-grow">
           <Routes>

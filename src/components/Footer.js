@@ -9,6 +9,7 @@ import logo from '../assets/logo.svg';
 const Footer = () => {
   return (
     <footer className="bg-uga-black text-white">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and company info */}

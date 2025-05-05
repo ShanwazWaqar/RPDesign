@@ -30,7 +30,9 @@ const ServiceIcon = ({ type }) => {
 
 const ServiceCard = ({ service }) => {
   return (
+    
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} />
       <div className="h-48 bg-gray-200 relative overflow-hidden">
         {service.image && (
           <img
