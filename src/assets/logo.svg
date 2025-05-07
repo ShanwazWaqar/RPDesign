@@ -1,29 +1,10 @@
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="300" height="100" fill="white"/>
-  
-  <!-- RP letters with modern styling -->
-  <g>
-    <!-- Red R -->
-    <path d="M50 20 L50 80 L65 80 L65 60 L75 60 C85 60 95 55 95 40 C95 25 85 20 75 20 L50 20 Z" fill="#BA0C2F"/>
-    <path d="M65 35 L70 35 C75 35 80 37 80 40 C80 43 75 45 70 45 L65 45 L65 35 Z" fill="white"/>
-    
-    <!-- Black P -->
-    <path d="M100 20 L100 80 L115 80 L115 60 L125 60 C135 60 145 55 145 40 C145 25 135 20 125 20 L100 20 Z" fill="#000000"/>
-    <path d="M115 35 L120 35 C125 35 130 37 130 40 C130 43 125 45 120 45 L115 45 L115 35 Z" fill="white"/>
-    
-    <!-- Connecting element between R and P -->
-    <rect x="85" y="40" width="25" height="5" fill="#BA0C2F" opacity="0.7"/>
-  </g>
-  
-  <!-- Design Technologies text -->
-  <text x="155" y="50" font-family="Arial, sans-serif" font-weight="300" font-size="18" fill="#000000">Design Technologies</text>
-  
-  <!-- Modern tech-inspired elements -->
-  <circle cx="235" cy="65" r="5" fill="#BA0C2F" opacity="0.7"/>
-  <circle cx="250" cy="65" r="3" fill="#000000"/>
-  <circle cx="265" cy="65" r="5" fill="#BA0C2F" opacity="0.7"/>
-  <path d="M235 65 L250 65 L265 65" stroke="#000000" stroke-width="1" fill="none"/>
-  <path d="M250 65 L250 30" stroke="#000000" stroke-width="1" fill="none"/>
-  <circle cx="250" cy="30" r="3" fill="#BA0C2F"/>
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .rp { font: bold 80px sans-serif; fill: #BA0C2F; }
+    .design { font: 24px sans-serif; fill: #000000; font-weight: 600; }
+    .tech { font: 18px sans-serif; fill: #000000; letter-spacing: 4px; }
+  </style>
+  <text x="10" y="80" class="rp">RP</text>
+  <text x="10" y="120" class="design">DESIGN</text>
+  <text x="10" y="150" class="tech">TECHNOLOGIES</text>
 </svg>

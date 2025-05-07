@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 130" width="360" height="130">
+  <style>
+    .headline { font: bold 40px 'Segoe UI', sans-serif; fill: #FFFFFF; }
+    .subline { font: 16px 'Segoe UI', sans-serif; fill: #E6E6E6; letter-spacing: 6px; }
+  </style>
+  <text x="0" y="50" class="headline">RP DESIGN</text>
+  <text x="0" y="100" class="subline">TECHNOLOGIES</text>
+</svg>
