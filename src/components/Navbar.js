@@ -50,10 +50,13 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Navigation items including the new Questionnaire
+  const navItems = ['Home', 'Projects', 'About', 'Contact', 'Questionnaire'];
+
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-1' : 'bg-red-700 py-1'
+        scrolled ? 'bg-white shadow-md py-1' : 'bg-transparent py-1'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,7 +81,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {['Home', 'Projects', 'About', 'Contact'].map((item, index) => (
+            {navItems.map((item, index) => (
               <motion.div
                 key={item}
                 initial={{ opacity: 0, y: -10 }}
@@ -88,7 +91,7 @@ const Navbar = () => {
                 <Link 
                   to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                   className={`font-medium transition-colors duration-300 ${
-                    scrolled ? 'text-gray-800 hover:text-red-700' : 'text-black hover:text-white'
+                    scrolled ? 'text-gray-800 hover:text-red-700' : 'text-white hover:text-white/80'
                   }`}
                   style={navbarStyles.link}
                   onMouseEnter={(e) => {
@@ -128,7 +131,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               className={`focus:outline-none transition-colors duration-300 ${
-                scrolled ? 'text-gray-800 hover:text-red-700' : 'text-black hover:text-white'
+                scrolled ? 'text-gray-800 hover:text-red-700' : 'text-white hover:text-white/80'
               }`}
             >
               <svg
@@ -167,7 +170,7 @@ const Navbar = () => {
           className="md:hidden bg-white shadow-lg"
         >
           <div className="px-4 py-4 space-y-4">
-            {['Home', 'Projects', 'About', 'Contact'].map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item}
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
