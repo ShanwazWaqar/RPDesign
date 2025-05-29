@@ -10,7 +10,7 @@ import riverRushImg from '../assets/river-rush.svg';
 import missionToMarsImg from '../assets/mission-to-mars.svg';
 import mpuzzleImg from '../assets/mpuzzle.svg';
 import fruitHealthImg from '../assets/fruit-health.svg';
-import respiratoryImg from '../assets/respiratory.svg';
+import respiratoryImg from '../assets/respiratory.jpg';
 import structuralHealthImg from '../assets/structural-health.svg';
 import gameSimImg from '../assets/game-simulators.svg';
 import robotsImg from '../assets/robots.svg';

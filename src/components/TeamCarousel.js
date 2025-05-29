@@ -13,7 +13,7 @@ const TeamCarousel = () => {
       name: 'Dr. Pidaparti',
       title: 'President and CEO',
       bio: 'He has over 30 years expertise and experience in design, prototyping and modeling studies related to lung health.',
-      initials: 'DP',
+      initials: 'RP',
     },
     {
       id: 2,
