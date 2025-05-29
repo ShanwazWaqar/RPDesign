@@ -18,7 +18,7 @@ const Footer = () => {
               <img src={logo} alt="RP Design Technologies" className="h-10 mb-4" />
             </Link>
             <p className="text-sm text-gray-300 mt-2">
-              Education and Health Innovations Company
+              Design and Health Innovations Company {/* Changed from "Education and Health Innovations" */}
             </p>
             <p className="text-sm text-gray-300 mt-4">
               Athens, Georgia
@@ -56,8 +56,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Focus Areas</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">STEM Education</li>
-              <li className="text-gray-300">Board Games</li>
+              <li className="text-gray-300">Design Innovation</li> {/* Changed from "STEM Education" */}
+              <li className="text-gray-300">Creative Technology Solutions</li>
               <li className="text-gray-300">Health Diagnostics</li>
               <li className="text-gray-300">Structural Health</li>
             </ul>
@@ -70,7 +70,7 @@ const Footer = () => {
             <p className="text-gray-300 mb-2">Watkinsville, GA 30677</p>
             <p className="text-gray-300 mb-2">Tel: 706-769-0435</p>
             <p className="text-gray-300">
-              Email: <a href="mailto:rmparti2011@rpdetech.com" className="hover:text-white">rmparti2011@rpdetech.com</a>
+              Email: <a href="mailto:rmparti2011@rpdetech.com" className="hover:text-white">rmparti2011@gmail.com</a>
             </p>
           </div>
         </div>

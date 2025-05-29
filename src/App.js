@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 // Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
@@ -27,12 +28,12 @@ function App() {
       },
       { threshold: 0.1 }
     );
-
+    
     // Observe all elements with the animate-on-scroll class
     document.querySelectorAll('.animate-on-scroll').forEach((element) => {
       observer.observe(element);
     });
-
+    
     return () => {
       // Clean up observer
       document.querySelectorAll('.animate-on-scroll').forEach((element) => {
@@ -44,7 +45,10 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} />
+        {/* Add ScrollToTop component to fix scrolling issue when navigating between pages */}
+        <ScrollToTop />
+        
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} />
         <Navbar />
         <main className="flex-grow">
           <Routes>

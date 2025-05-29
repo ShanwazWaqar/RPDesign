@@ -1,13 +1,28 @@
 // src/pages/Contact.js
-import React, { useRef, useState } from 'react';
-// Remove the motion import since it's not used
-// import { motion } from 'framer-motion';
-// Remove the ScrollAnimation import since it's not used
-// import ScrollAnimation from '../components/ScrollAnimation';
+import React, { useRef, useState, useEffect } from 'react';
 import GoogleMap from '../components/GoogleMap';
 
 const Contact = () => {
   const contactFormRef = useRef(null);
+  
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    // Load the EmailJS SDK
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    script.onload = () => {
+      // Initialize with your EmailJS public key
+      window.emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
+    };
+    
+    return () => {
+      // Clean up
+      document.body.removeChild(script);
+    };
+  }, []);
   
   const scrollToContactForm = () => {
     contactFormRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -24,6 +39,8 @@ const Contact = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,9 +53,25 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(false);
     
-    // Simulate form submission
-    setTimeout(() => {
+    // Prepare template parameters for EmailJS
+    const templateParams = {
+      from_name: `${formData.firstName} ${formData.lastName}`,
+      reply_to: formData.email,
+      phone_number: formData.phone || 'Not provided',
+      subject: formData.subject || 'General Inquiry',
+      message: formData.message
+    };
+    
+    // Send email using EmailJS
+    window.emailjs.send(
+      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      templateParams
+    )
+    .then((response) => {
+      console.log('Email sent successfully:', response);
       setIsSubmitting(false);
       setSubmitSuccess(true);
       
@@ -51,7 +84,13 @@ const Contact = () => {
         subject: '',
         message: '',
       });
-    }, 1500);
+    })
+    .catch((error) => {
+      console.error('Email sending failed:', error);
+      setIsSubmitting(false);
+      setSubmitError(true);
+      setErrorMessage('There was a problem sending your message. Please try again later.');
+    });
   };
 
   return (
@@ -59,7 +98,6 @@ const Contact = () => {
       {/* Page Header */}
       <section className="bg-uga-red text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Replace motion.h1 with regular h1 since we're not using motion animations */}
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl max-w-2xl">
             Get in touch with our team to learn more about our projects or discuss collaboration opportunities.
@@ -79,6 +117,11 @@ const Contact = () => {
                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
                   <p className="font-medium">Thank you for your message!</p>
                   <p>Our team will get back to you as soon as possible.</p>
+                </div>
+              ) : submitError ? (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
+                  <p className="font-medium">Message not sent</p>
+                  <p>{errorMessage}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
@@ -157,7 +200,7 @@ const Contact = () => {
                     >
                       <option value="">Select a topic</option>
                       <option value="general">General Inquiry</option>
-                      <option value="education">Educational Products</option>
+                      <option value="design">Design Products</option>
                       <option value="health">Health Technologies</option>
                       <option value="collaboration">Partnership/Collaboration</option>
                       <option value="careers">Careers</option>
@@ -218,7 +261,6 @@ const Contact = () => {
                     <h3 className="font-medium text-gray-900">Address</h3>
                     <p className="text-gray-600">1670 Terrapin Ct</p>
                     <p className="text-gray-600">Watkinsville, GA 30677</p>
-                    <p className="text-gray-600 mt-1">Located near the C. Herman and Mary Virginia Terry College of Business at UGA</p>
                   </div>
                 </div>
                 
@@ -239,8 +281,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-gray-900">Email</h3>
                     <p className="text-gray-600">
-                      <a href="mailto:rmparti2011@rpdetech.com" className="hover:text-uga-red">
-                        rmparti2011@rpdetech.com
+                      <a href="mailto:rmparti2011@gmail.com" className="hover:text-uga-red">
+                        rmparti2011@gmail.com
                       </a>
                     </p>
                   </div>
@@ -267,18 +309,18 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-md p-8">
             <h2 className="text-2xl font-bold mb-4">Work With Us</h2>
-            <p className="mb-4 text-gray-700">Interested in joining our team of innovators in education and health technology?</p>
+            <p className="mb-4 text-gray-700">Interested in joining our team of innovators in design and health technology?</p>
             <p className="text-gray-700">
               Email us at{' '}
-              <a href="mailto:rmparti2011@rpdetech.com" className="text-uga-red hover:underline">
-                rmparti2011@rpdetech.com
+              <a href="mailto:rmparti2011@gmail.com" className="text-uga-red hover:underline">
+                rmparti2011@gmail.com
               </a>
               {' '}with your resume and a cover letter describing your interest in our work.
             </p>
             <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
               <p className="text-sm text-gray-600">We're currently looking for passionate individuals with backgrounds in:</p>
               <ul className="mt-2 text-sm text-gray-600 list-disc list-inside">
-                <li>Educational Game Design</li>
+                <li>Design Innovation</li>  
                 <li>Health Diagnostics Technology</li>
                 <li>3D Modeling & Simulation</li>
                 <li>Software Development</li>
@@ -306,58 +348,22 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center text-uga-red hover:underline"
             >
-              <span>Get Directions</span>
+              {/* <span>Get Directions</span>
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
+              </svg> */}
             </a>
           </div>
         </div>
       </section>
       
-      {/* FAQ section - Fixed to be full width with consistent styling */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
-          
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="bg-white p-6 rounded-lg shadow-md h-full">
-              <h3 className="text-xl font-bold mb-3">What types of projects does RP Design Technologies work on?</h3>
-              <p className="text-gray-700">
-                We focus on creating educational games and tools for STEM education, as well as developing diagnostic/monitoring technologies for healthcare and infrastructure applications. Our projects include board games like River Rush and Mission to Mars, as well as health monitoring systems and structural health assessments.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md h-full">
-              <h3 className="text-xl font-bold mb-3">Do you offer internship opportunities?</h3>
-              <p className="text-gray-700">
-                Yes, we offer internships for students in relevant fields such as engineering, computer science, education, and health sciences. Please contact us with your resume and areas of interest. We particularly welcome UGA students looking to gain real-world experience in educational technology and health innovation.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md h-full">
-              <h3 className="text-xl font-bold mb-3">How can I purchase your educational board games?</h3>
-              <p className="text-gray-700">
-                Our educational board games are available for purchase by educational institutions. Please reach out via email or phone to discuss pricing and availability. We offer special pricing for schools and bulk orders, as well as curriculum integration support for educators.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md h-full">
-              <h3 className="text-xl font-bold mb-3">Do you offer custom solutions?</h3>
-              <p className="text-gray-700">
-                Absolutely! We work with clients to develop customized solutions for their specific needs in education and health diagnostics. Our team can design custom board games, applications, or monitoring systems tailored to your organization's unique requirements. Contact us to discuss your project specifications and goals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
       
       {/* CTA Section with proper link to contact form */}
       <section className="bg-uga-red text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Innovate With Us?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Whether you're an educator, healthcare professional, or technology enthusiast, 
+            Whether you're a design professional, healthcare specialist, or technology enthusiast,
             we'd love to collaborate with you on innovative solutions.
           </p>
           <button 

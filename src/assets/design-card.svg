@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="200px" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    
+    <linearGradient id="ugaRedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BA0C2F" />
+      <stop offset="100%" stop-color="#a70b2a" />
+    </linearGradient>
+    
+    <!-- Shadows -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="200" fill="url(#bgGradient)" />
+  
+  <!-- Design tools and elements -->
+  <g transform="translate(200, 100)">
+    <!-- Abstract design shapes -->
+    <path d="M-150,-50 L-100,-80 L-50,-50 L-100,-20 Z" fill="url(#ugaRedGradient)" opacity="0.1" />
+    <path d="M100,-40 L150,-70 L200,-40 L150,-10 Z" fill="url(#ugaRedGradient)" opacity="0.1" />
+    <path d="M-130,40 L-80,10 L-30,40 L-80,70 Z" fill="url(#ugaRedGradient)" opacity="0.1" />
+    <path d="M50,50 L100,20 L150,50 L100,80 Z" fill="url(#ugaRedGradient)" opacity="0.1" />
+    
+    <!-- Circular design elements -->
+    <circle cx="-50" cy="0" r="60" fill="url(#ugaRedGradient)" opacity="0.05" />
+    <circle cx="100" cy="-10" r="40" fill="url(#ugaRedGradient)" opacity="0.05" />
+    
+    <!-- Ruler element -->
+    <g transform="translate(-110, 20) rotate(-15)">
+      <rect x="-60" y="-10" width="120" height="20" rx="2" fill="white" stroke="#e6e7ea" filter="url(#dropShadow)" />
+      <line x1="-55" y1="-10" x2="-55" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="-45" y1="-10" x2="-45" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="-35" y1="-10" x2="-35" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="-25" y1="-10" x2="-25" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="-15" y1="-10" x2="-15" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="-5" y1="-10" x2="-5" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="5" y1="-10" x2="5" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="15" y1="-10" x2="15" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="25" y1="-10" x2="25" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="35" y1="-10" x2="35" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="45" y1="-10" x2="45" y2="10" stroke="#d1d5db" stroke-width="1" />
+      <line x1="55" y1="-10" x2="55" y2="10" stroke="#d1d5db" stroke-width="1" />
+    </g>
+    
+    <!-- Color palette -->
+    <g transform="translate(-40, -40)">
+      <circle cx="0" cy="0" r="30" fill="white" stroke="#e6e7ea" filter="url(#dropShadow)" />
+      <path d="M0,0 L17.3,17.3 A30,30 0 0,0 26.0,15.0 L0,0 Z" fill="#BA0C2F" />
+      <path d="M0,0 L26.0,15.0 A30,30 0 0,0 30.0,0.0 L0,0 Z" fill="#4299e1" />
+      <path d="M0,0 L30.0,0.0 A30,30 0 0,0 26.0,-15.0 L0,0 Z" fill="#48bb78" />
+      <path d="M0,0 L26.0,-15.0 A30,30 0 0,0 17.3,-17.3 L0,0 Z" fill="#ecc94b" />
+      <path d="M0,0 L17.3,-17.3 A30,30 0 0,0 0.0,-30.0 L0,0 Z" fill="#ed8936" />
+      <path d="M0,0 L0.0,-30.0 A30,30 0 0,0 -17.3,-17.3 L0,0 Z" fill="#667eea" />
+      <path d="M0,0 L-17.3,-17.3 A30,30 0 0,0 -30.0,0.0 L0,0 Z" fill="#9f7aea" />
+      <path d="M0,0 L-30.0,0.0 A30,30 0 0,0 -15.0,26.0 L0,0 Z" fill="#f56565" />
+      <path d="M0,0 L-15.0,26.0 A30,30 0 0,0 0.0,30.0 L0,0 Z" fill="#38b2ac" />
+      <path d="M0,0 L0.0,30.0 A30,30 0 0,0 17.3,17.3 L0,0 Z" fill="#4c51bf" />
+      <circle cx="0" cy="0" r="10" fill="white" stroke="#e6e7ea" />
+    </g>
+    
+    <!-- Pencil tool -->
+    <g transform="translate(80, 25) rotate(-30)">
+      <path d="M-5,-50 L5,-50 L5,30 L-5,30 Z" fill="#FFD700" />
+      <path d="M-5,-50 L5,-50 L0,-60 Z" fill="#4b5563" />
+      <path d="M-5,30 L5,30 L5,40 L-5,40 Z" fill="#e83e8c" />
+      <path d="M-3,-45 L3,-45 L3,25 L-3,25 Z" fill="none" stroke="#4b5563" stroke-width="0.5" opacity="0.3" />
+    </g>
+    
+    <!-- Design App Window -->
+    <g transform="translate(60, -20)">
+      <rect x="-40" y="-30" width="80" height="60" rx="3" fill="white" filter="url(#dropShadow)" />
+      <rect x="-40" y="-30" width="80" height="10" rx="3" fill="#f3f4f6" />
+      <circle cx="-30" cy="-25" r="2" fill="#BA0C2F" />
+      <circle cx="-23" cy="-25" r="2" fill="#f59e0b" />
+      <circle cx="-16" cy="-25" r="2" fill="#10b981" />
+      
+      <!-- Design shape in window -->
+      <rect x="-30" y="-15" width="30" height="20" fill="url(#ugaRedGradient)" opacity="0.7" rx="2" />
+      <circle cx="15" cy="-5" r="15" fill="url(#ugaRedGradient)" opacity="0.5" />
+      <rect x="-30" y="10" width="60" height="5" fill="#f3f4f6" rx="2" />
+      <rect x="-30" y="20" width="40" height="5" fill="#f3f4f6" rx="2" />
+    </g>
+  </g>
+  
+  <!-- Modern Design text with proper contrast for accessibility -->
+  <rect x="20" y="20" width="120" height="50" rx="5" fill="url(#ugaRedGradient)" filter="url(#dropShadow)" />
+  <text x="30" y="55" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Design</text>
+</svg>

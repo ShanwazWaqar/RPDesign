@@ -22,30 +22,41 @@ const Projects = () => {
   
   // Project data from the document - wrapped in useMemo to prevent recreation on each render
   const allProjects = useMemo(() => [
+    // The following 4 projects have been commented out as requested
+    /*
     {
       id: 1,
       title: 'River Rush Board Game',
-      description: 'Teach sustainability to school children through an engaging board game experience. Players journey through the James River by answering questions about sustainability related to Virginia SOLs.',
+      description: 'Teach sustainability through an engaging board game experience. Players journey through the James River by answering questions about sustainability.',
       image: riverRushImg,
       category: 'Board Games',
-      type: 'education',
+      type: 'design', // Changed from 'education'
     },
     {
       id: 2,
       title: 'DSG: Mission to Mars',
-      description: 'Board game introducing the design process and engineering values to students. Teams go through various steps of the design process and learn to make decisions and build their design.',
+      description: 'Board game introducing the design process and engineering values. Teams go through various steps of the design process and learn to make decisions and build their design.',
       image: missionToMarsImg,
       category: 'Board Games',
-      type: 'education',
+      type: 'design', // Changed from 'education'
     },
     {
       id: 3,
       title: 'Mpuzzle Game',
-      description: '3D puzzle with building blocks that mimic natural cellular structures. This puzzle helps teach problem-solving skills to children.',
+      description: '3D puzzle with building blocks that mimic natural cellular structures. This puzzle helps teach problem-solving skills.',
       image: mpuzzleImg,
       category: 'Board Games',
-      type: 'education',
+      type: 'design', // Changed from 'education'
     },
+    {
+      id: 7,
+      title: 'Game Simulators',
+      description: 'Interactive game simulators for enhancing creative thinking and problem-solving experiences.',
+      image: gameSimImg,
+      category: 'Game Simulators',
+      type: 'design', // Changed from 'education'
+    },
+    */
     {
       id: 4,
       title: 'Fruit Health APP',
@@ -69,14 +80,6 @@ const Projects = () => {
       image: structuralHealthImg,
       category: 'Apps',
       type: 'health',
-    },
-    {
-      id: 7,
-      title: 'Game Simulators',
-      description: 'Educational game simulators for enhancing learning experiences.',
-      image: gameSimImg,
-      category: 'Game Simulators',
-      type: 'education',
     },
     {
       id: 8,
@@ -132,7 +135,7 @@ const Projects = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl max-w-2xl"
           >
-            Explore our innovative projects in education, health, and technology.
+            Explore our innovative projects in design, health, and technology.  {/* Changed from "education, health, and technology" */}
           </motion.p>
         </div>
       </section>
@@ -151,16 +154,16 @@ const Projects = () => {
             >
               All Projects
             </button>
-            <button
-              onClick={() => setFilter('education')}
+            {/* <button
+              onClick={() => setFilter('design')} 
               className={`px-4 py-2 rounded-md mb-2 transition-colors ${
-                filter === 'education'
+                filter === 'design' 
                   ? 'bg-uga-red text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
-              Education
-            </button>
+              Design  
+            </button> */}
             <button
               onClick={() => setFilter('health')}
               className={`px-4 py-2 rounded-md mb-2 transition-colors ${
@@ -209,7 +212,7 @@ const Projects = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Interested in our projects?</h2>
           <p className="text-lg mb-8">
-            Contact us to learn more about our educational games, health innovations, or technological solutions.
+            Contact us to learn more about our design innovations, health technologies, or technological solutions.  {/* Changed from "educational games" */}
           </p>
           <a
             href="/contact"

@@ -169,7 +169,7 @@ const ContactForm = () => {
               >
                 <option value="">Select a topic</option>
                 <option value="general">General Inquiry</option>
-                <option value="education">Educational Products</option>
+                <option value="design">Design Products</option> {/* Changed from "education" to "design" */}
                 <option value="health">Health Technologies</option>
                 <option value="collaboration">Partnership/Collaboration</option>
                 <option value="careers">Careers</option>

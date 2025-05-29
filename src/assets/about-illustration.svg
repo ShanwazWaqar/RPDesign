@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="400px" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Subtle background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    
+    <!-- UGA Red -->
+    <linearGradient id="ugaRedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BA0C2F" />
+      <stop offset="100%" stop-color="#a70b2a" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- Grid pattern -->
+    <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#e6e7ea" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="url(#smallGrid)"/>
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#d1d5db" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background with grid -->
+  <rect width="800" height="400" fill="url(#bgGradient)" />
+  <rect width="800" height="400" fill="url(#grid)" opacity="0.6" />
+  
+  <!-- Health monitoring system abstract representation -->
+  <g transform="translate(400, 200)">
+    <!-- Stylized heart monitor line -->
+    <path d="M-360,0 Q-320,-5 -300,0 T-260,0 T-240,0 T-220,0 T-200,-40 T-180,40 T-160,0 T-140,0 T-120,0 T-100,10 T-80,0 T-60,0 T-40,0 T-20,0 T0,0 T20,0 T40,0 T60,0 T80,-5 T100,5 T120,0 T140,0 T160,0 T180,0 T200,0 T220,0 T240,0 T260,0 T280,0 T300,0 T320,0 T340,0 T360,0" 
+          stroke="url(#ugaRedGradient)" 
+          stroke-width="3" 
+          fill="none" 
+          stroke-linejoin="round" 
+          stroke-linecap="round" 
+          filter="url(#shadow)" />
+    
+    <!-- Circular data visualization elements -->
+    <g transform="translate(-200, -80)">
+      <circle cx="0" cy="0" r="60" fill="none" stroke="#e6e7ea" stroke-width="10" />
+      <circle cx="0" cy="0" r="60" fill="none" stroke="url(#ugaRedGradient)" stroke-width="10" stroke-dasharray="270 377" stroke-dashoffset="0" />
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="24" fill="#4b5563" text-anchor="middle" dominant-baseline="middle">72%</text>
+    </g>
+    
+    <g transform="translate(200, -80)">
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#e6e7ea" stroke-width="6" />
+      <circle cx="0" cy="0" r="40" fill="none" stroke="url(#ugaRedGradient)" stroke-width="6" stroke-dasharray="188 251" stroke-dashoffset="0" />
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" dominant-baseline="middle">75%</text>
+    </g>
+    
+    <!-- Health cross -->
+    <g transform="translate(0, 80)">
+      <rect x="-50" y="-10" width="100" height="20" fill="url(#ugaRedGradient)" rx="5" filter="url(#shadow)" />
+      <rect x="-10" y="-50" width="20" height="100" fill="url(#ugaRedGradient)" rx="5" filter="url(#shadow)" />
+    </g>
+    
+    <!-- Abstract data lines -->
+    <g opacity="0.9">
+      <path d="M-320,80 L-250,80" stroke="url(#ugaRedGradient)" stroke-width="2" fill="none" />
+      <circle cx="-320" cy="80" r="5" fill="url(#ugaRedGradient)" />
+      <circle cx="-250" cy="80" r="5" fill="url(#ugaRedGradient)" />
+      
+      <path d="M-250,80 L-250,120 L-180,120" stroke="url(#ugaRedGradient)" stroke-width="2" fill="none" />
+      <circle cx="-250" cy="120" r="5" fill="url(#ugaRedGradient)" />
+      <circle cx="-180" cy="120" r="5" fill="url(#ugaRedGradient)" />
+      
+      <path d="M150,120 L220,120 L220,80 L270,80" stroke="url(#ugaRedGradient)" stroke-width="2" fill="none" />
+      <circle cx="150" cy="120" r="5" fill="url(#ugaRedGradient)" />
+      <circle cx="220" cy="120" r="5" fill="url(#ugaRedGradient)" />
+      <circle cx="220" cy="80" r="5" fill="url(#ugaRedGradient)" />
+      <circle cx="270" cy="80" r="5" fill="url(#ugaRedGradient)" />
+    </g>
+    
+    <!-- Abstract rounded rectangles -->
+    <rect x="-150" y="50" width="80" height="60" rx="10" fill="white" stroke="#e6e7ea" stroke-width="1" filter="url(#shadow)" />
+    <rect x="-140" y="60" width="60" height="10" rx="5" fill="#f3f4f6" />
+    <rect x="-140" y="80" width="40" height="10" rx="5" fill="#f3f4f6" />
+    
+    <rect x="50" y="50" width="80" height="60" rx="10" fill="white" stroke="#e6e7ea" stroke-width="1" filter="url(#shadow)" />
+    <rect x="60" y="60" width="60" height="10" rx="5" fill="#f3f4f6" />
+    <rect x="60" y="80" width="40" height="10" rx="5" fill="#f3f4f6" />
+    
+    <!-- Data visualization bar chart -->
+    <g transform="translate(300, 80)">
+      <rect x="-40" y="-60" width="15" height="60" rx="2" fill="url(#ugaRedGradient)" opacity="0.7" />
+      <rect x="-20" y="-40" width="15" height="40" rx="2" fill="url(#ugaRedGradient)" opacity="0.8" />
+      <rect x="0" y="-70" width="15" height="70" rx="2" fill="url(#ugaRedGradient)" opacity="0.9" />
+      <rect x="20" y="-50" width="15" height="50" rx="2" fill="url(#ugaRedGradient)" opacity="0.7" />
+    </g>
+  </g>
+</svg>
